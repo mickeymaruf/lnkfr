@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       {/* header */}
       <header>
-        <nav className="border-b border-gray-100 flex items-center justify-between px-20 py-4">
+        <nav className="border-b border-gray-100 flex items-center justify-between px-5 md:px-20 py-4">
           <h5 className="font-medium text-2xl text-rose-600">lnkfr</h5>
 
           <ul className="flex items-center gap-x-8 text-sm">
@@ -25,13 +25,13 @@ export default function Home() {
         </nav>
 
         {/* hero */}
-        <div className="text-center py-40 container mx-auto">
-          <h1 className="text-6xl font-bold text-gray-900 mb-5">
+        <div className="text-center px-5 py-40 container mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-5">
             Showcase Your Work with <span className="text-rose-600">lnkfr</span>
           </h1>
-          <p className="text-2xl text-gray-700">
+          <p className="text-xl md:text-2xl text-gray-700">
             The elegant portfolio platform for designers and developers who want{" "}
-            <br />
+            <br className="hidden md:block" />
             to share their best work with clients and potential employers.
           </p>
           <div className="space-x-5 mt-8 mb-16">
@@ -74,13 +74,13 @@ export default function Home() {
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 70%, 0 10%)" }}
         ></div>
 
-        <section className="container mx-auto py-20 flex flex-col items-center text-center">
+        <section className="container mx-auto px-5 py-20 flex flex-col items-center text-center">
           <h1 className="text-5xl font-bold mb-6">
             Showcase your work <br /> with precision and style
           </h1>
           <p className="text-lg text-gray-700">
             lnkfr gives developers and designers the tools to present their work{" "}
-            <br />
+            <br className="hidden md:block" />
             professionally, with complete control over how their projects look
             and feel.
           </p>
@@ -128,21 +128,21 @@ export default function Home() {
         </section>
 
         <div
-          className="bg-gradient-to-r from-rose-500 via-rose-500/80 to-purple-600 w-full h-12 my-20"
+          className="bg-gradient-to-r from-rose-500 via-rose-500/80 to-purple-600 w-full h-12 my-20 px-5"
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 70%, 0 10%)" }}
         ></div>
 
-        <section className="container mx-auto py-20 flex flex-col items-center text-center">
+        <section className="container mx-auto px-5 py-20 flex flex-col items-center text-center">
           <h1 className="text-5xl font-bold mb-6">
             Turn your ugly screenshots <br /> into sleek mockups
           </h1>
           <p className="text-lg text-gray-700">
             lnkfr gives developers and designers the tools to present their work{" "}
-            <br />
+            <br className="hidden md:block" />
             professionally, with complete control over how their projects look
             and feel.
           </p>
-          <div className="mt-10 w-4/5 mx-auto grid grid-cols-2">
+          <div className="mt-10 md:w-4/5 mx-auto grid grid-cols-2">
             <div className="border border-r-0 p-5 flex items-center relative">
               <img className="" src="/pre-mock.png" alt="" />
               <div className="text-5xl absolute left-10 top-0 -translate-y-1/2 -rotate-12">
@@ -170,7 +170,7 @@ export default function Home() {
         <Testimonial />
 
         <div
-          className="bg-gradient-to-r from-rose-500 via-rose-500/80 to-purple-600 w-full h-12 my-10"
+          className="bg-gradient-to-r from-rose-500 via-rose-500/80 to-purple-600 w-full h-12 my-10 px-5"
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 70%, 0 10%)" }}
         ></div>
 
@@ -179,7 +179,8 @@ export default function Home() {
             Wanna get yourself a profile?
           </h1>
           <p className="text-lg text-gray-700">
-            lnkfr gives developers and designers the tools to present their work{" "}
+            lnkfr gives developers and designers the tools to present their
+            work{" "}
           </p>
           <button className="mt-6 px-12 py-3 bg-rose-600 rounded-xl text-white shadow-lg">
             Get Started
