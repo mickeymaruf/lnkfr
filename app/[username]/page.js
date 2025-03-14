@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
-import { IoCloseCircle } from "react-icons/io5";
 import ScrollToDown from "@/components/scroll-to-down";
 import Image from "next/image";
 import {
@@ -19,6 +18,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Safari from "@/components/mocks/Safari";
+import Tiptap from "@/components/tiptap/tiptap";
+import Link from "next/link";
 
 const projects = [
   { _id: 1, cover: "/171shots_so.png" },
@@ -97,43 +98,9 @@ export default function Page() {
         </aside>
         <main className="md:sticky top-0 h-full w-[67%] md:pl-0 p-8 md:p-16">
           <div className="flex justify-end mb-3">
-            <Drawer>
-              <DrawerTrigger asChild>
-                <Button className="ml-auto">Add project</Button>
-              </DrawerTrigger>
-              <DrawerContent>
-                <div className="mx-auto w-full max-w-sm">
-                  <DrawerHeader>
-                    <DrawerTitle>Move Goal</DrawerTitle>
-                    <DrawerDescription>
-                      Set your daily activity goal.
-                    </DrawerDescription>
-                  </DrawerHeader>
-                  <div className="p-4 pb-0">
-                    <form className="grid items-start gap-4">
-                      <div className="grid gap-2">
-                        {/* <Label htmlFor="email">Email</Label> */}
-                        <Input
-                          type="email"
-                          id="email"
-                          placeholder="shadcn@example.com"
-                        />
-                      </div>
-                      <div className="grid gap-2">
-                        {/* <Label htmlFor="username">Username</Label> */}
-                        <Input id="username" placeholder="@shadcn" />
-                      </div>
-                      <Button type="submit">Save changes</Button>
-                    </form>
-                  </div>
-                  <DrawerFooter>
-                    <DrawerClose asChild>
-                      <div>test</div>
-                    </DrawerClose>
-                  </DrawerFooter>
-                </div>
-              </DrawerContent>
-            </Drawer>
+            <Link href="/maruf/editor/add">
+              <Button>Add project</Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -387,6 +354,7 @@ export default function Page() {
                     <span className="text-black">Developed</span> no-code
                     drag-and-drop website builders in Next.js.
                   </p>
+                  <Safari src="/builder/dfyb.png" alt="" />
                   <Safari src="/builder/theme-builder-1.png" alt="" />
                   <Safari src="/builder/theme-builder-2.png" alt="" />
                   <Safari src="/builder/theme-builder-3.png" alt="" />
